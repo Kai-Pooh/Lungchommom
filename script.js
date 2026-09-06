@@ -5,7 +5,7 @@
 // ---------------------------------------------------------
 // ⚙️ ตั้งค่าตรงนี้ให้ครบก่อนใช้งานจริง
 // ---------------------------------------------------------
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCB025yabQxfeo2hcMI9I4enaUNFl3YelzgT59_kj1rHBg7A2LdKAO-D34tM5glkSz/exec"; // URL ของ Web App (/exec) จาก Google Apps Script
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwClBuT_mR7zTKcFFT-4NcMg279CaNOZXi3qA_ZW9Xt45pCrlQ_6KrKtAQXDLdHv0sY/exec"; // URL ของ Web App (/exec) จาก Google Apps Script
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTvn1wMZXw4W-ZlqR77HCKEZfi6nMEIE3XF9tmF4Y9ncX1Jyp3p3L14uyQvXYUm4_0U6fUawrJLg_wI/pub?gid=0&single=true&output=csv";                 // URL CSV ของ Google Sheet ที่ publish ไว้
 
 // ---------------------------------------------------------
