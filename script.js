@@ -227,11 +227,16 @@ function initOrderPage() {
       submitBtn.textContent = "กำลังส่งคำสั่งซื้อ...";
     }
 
+    // หมายเหตุ: Google Apps Script Web App มักจะ redirect ไปที่
+    // script.googleusercontent.com ก่อนส่ง response กลับจริง ทำให้บาง
+    // browser อ่าน response ต่อไม่ได้ (ติด CORS ตอน redirect) แม้ว่า
+    // ฝั่ง Apps Script จะรันจบและเขียนข้อมูลลง Sheet สำเร็จไปแล้วก็ตาม
+    // จึงไม่ยึด res.text() เป็นตัวตัดสินความสำเร็จ แต่ redirect ไป
+    // thankyou.html ทันทีที่ request ถูกส่งออกไปโดยไม่มี network error จริงๆ
     fetch(APPS_SCRIPT_URL, {
       method: "POST",
       body: JSON.stringify(payload),
     })
-      .then((res) => res.text())
       .then(() => {
         window.location.href = "thankyou.html";
       })
