@@ -1,0 +1,556 @@
+/* =========================================================
+   Lungจั้มมั้ม — Cozy & Fluffy Minimal Theme
+   โทนสี: ขาว ครีม วานิลลา น้ำตาลอ่อน
+   ========================================================= */
+
+:root {
+  /* --- Warm Cozy Palette --- */
+  --color-bg: #FFFBF5;
+  --color-cream: #FFF3E2;
+  --color-vanilla: #FCE7C8;
+  --color-brown-light: #E8CBA8;
+  --color-brown: #C9A277;
+  --color-brown-dark: #8B6B4A;
+  --color-text: #5A4632;
+  --color-text-soft: #8A7562;
+  --color-white: #FFFFFF;
+  --color-accent: #F4A896;      /* ชมพูอบอุ่น ใช้เน้นปุ่ม/ไฮไลท์ */
+  --color-accent-dark: #E88B76;
+  --color-shadow: rgba(139, 107, 74, 0.15);
+
+  /* --- Shape & Softness --- */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+
+  /* --- Spacing --- */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+
+  /* --- Typography --- */
+  --font-main: 'Poppins', 'Kanit', 'Noto Sans Thai', sans-serif;
+  --font-display: 'Baloo 2', 'Kanit', 'Noto Sans Thai', sans-serif;
+
+  /* --- Transition --- */
+  --transition-soft: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* =========================================================
+   Reset & Base
+   ========================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* =========================================================
+   Typography helpers
+   ========================================================= */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-brown-dark);
+  line-height: 1.3;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+h3 { font-size: 1.3rem; }
+
+p {
+  color: var(--color-text-soft);
+}
+
+.text-center { text-align: center; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.section-title span {
+  display: inline-block;
+  background: var(--color-vanilla);
+  padding: 4px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  color: var(--color-brown-dark);
+  margin-bottom: var(--space-sm);
+}
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 251, 245, 0.9);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px dashed var(--color-vanilla);
+}
+
+.navbar .logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-brown-dark);
+  font-weight: 800;
+}
+
+.navbar ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.navbar a {
+  font-weight: 600;
+  color: var(--color-text-soft);
+  transition: var(--transition-soft);
+}
+
+.navbar a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* =========================================================
+   Hero Section
+   ========================================================= */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--space-md);
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-bg) 100%);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content p {
+  margin: var(--space-sm) 0 var(--space-md);
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition-soft);
+  box-shadow: 0 6px 0 var(--color-brown-light);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 var(--color-brown-light);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 6px 0 var(--color-accent-dark);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--color-white);
+  color: var(--color-brown-dark);
+  border: 2px solid var(--color-vanilla);
+  box-shadow: 0 6px 0 var(--color-vanilla);
+}
+
+.btn-secondary:hover {
+  background: var(--color-vanilla);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   Product Grid & Card
+   ========================================================= */
+.products-section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+/* --- Filter Bar (product.html) --- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.filter-bar .filter-btn {
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.filter-bar .filter-btn:active {
+  transform: none;
+}
+
+.filter-bar .filter-btn.active {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+
+.product-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transition: var(--transition-soft);
+  border: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  border-color: var(--color-vanilla);
+  box-shadow: 0 16px 32px var(--color-shadow);
+}
+
+.product-card .product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-soft);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.08);
+}
+
+.product-info {
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.product-info .product-mood {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--color-vanilla);
+  color: var(--color-brown-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.product-info h3 {
+  color: var(--color-brown-dark);
+}
+
+.product-info .product-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  flex-grow: 1;
+}
+
+.product-info .product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-xs);
+}
+
+.product-price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-accent-dark);
+  font-size: 1.2rem;
+}
+
+.product-size {
+  font-size: 0.8rem;
+  color: var(--color-text-soft);
+  background: var(--color-cream);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* =========================================================
+   Mood Card (index.html) — product-card แบบไม่มีรูป ใช้เป็นลิงก์
+   ========================================================= */
+.mood-card {
+  cursor: pointer;
+  padding: var(--space-md);
+}
+
+.mood-card .product-info {
+  padding: 0;
+  gap: var(--space-xs);
+}
+
+.mood-card .product-mood {
+  align-self: flex-start;
+}
+
+/* =========================================================
+   Form (order.html)
+   ========================================================= */
+.form-card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 0 8px 24px var(--color-shadow);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-brown-dark);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.form-group .hint {
+  display: block;
+  font-weight: 400;
+  color: var(--color-text-soft);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 18px;
+  border: 2px solid var(--color-vanilla);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: var(--transition-soft);
+}
+
+.form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: var(--color-white);
+}
+
+.form-group input:read-only {
+  background: var(--color-vanilla);
+  color: var(--color-brown-dark);
+  font-weight: 600;
+}
+
+.form-submit {
+  width: 100%;
+  text-align: center;
+}
+
+/* =========================================================
+   Thank You Page (thankyou.html)
+   ========================================================= */
+.thankyou-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+.thankyou-card {
+  max-width: 480px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: 0 8px 24px var(--color-shadow);
+}
+
+.thankyou-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.thankyou-card p {
+  margin: var(--space-sm) 0 var(--space-lg);
+}
+
+/* =========================================================
+   Admin Table (admin.html)
+   ========================================================= */
+.admin-section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px var(--color-shadow);
+  padding: var(--space-sm);
+}
+
+#ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+#ordersTable thead th {
+  text-align: left;
+  padding: 14px 16px;
+  background: var(--color-vanilla);
+  color: var(--color-brown-dark);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+#ordersTable thead th:first-child {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+#ordersTable thead th:last-child {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+#ordersTable tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-cream);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+#ordersTable tbody tr:hover {
+  background: var(--color-cream);
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+  background: var(--color-vanilla);
+  padding: var(--space-lg) var(--space-md);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
+.footer p {
+  color: var(--color-brown-dark);
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .navbar ul {
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-sm);
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ยืนยันคำสั่งซื้อ — Lungจั้มมั้ม</title>
+  <meta name="description" content="กรอกข้อมูลเพื่อยืนยันคำสั่งซื้อตุ๊กตามังกรขนฟูจาก Lungจั้มมั้ม">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== Navbar ========== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">Lungจั้มมั้ม</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="product.html">สินค้าทั้งหมด</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Page Heading ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>เกือบกอดกันแล้ว</h1>
+      <p>กรอกข้อมูลด้านล่างให้ครบ แล้วน้องมังกรขนฟูจะเดินทางไปหาคุณ</p>
+    </div>
+  </section>
+
+  <!-- ========== Order Form Section ========== -->
+  <section class="products-section">
+    <div class="container">
+      <form id="orderForm" class="form-card">
+
+        <div class="form-group">
+          <label for="customerName">ชื่อลูกค้า</label>
+          <input type="text" id="customerName" name="customerName" placeholder="ชื่อ-นามสกุล" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">เบอร์โทร / Line ID</label>
+          <input type="text" id="contact" name="contact" placeholder="เบอร์โทรศัพท์ หรือ Line ID" required>
+        </div>
+
+        <div class="form-group">
+          <label for="items">รายการสินค้าที่สั่ง</label>
+          <textarea id="items" name="items" placeholder="เช่น ตุ๊กตา Chongyue x1" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="total">ยอดรวม (บาท)</label>
+          <input type="text" id="total" name="total" placeholder="0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="note">หมายเหตุ <span class="hint">(ถ้ามี)</span></label>
+          <textarea id="note" name="note" placeholder="เช่น ที่อยู่จัดส่ง หรือข้อความเพิ่มเติม"></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">ยืนยันคำสั่งซื้อ</button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <p>&copy; 2026 Lungจั้มมั้ม — ตุ๊กตามังกรขนฟูที่พร้อมกอดคุณทุกวัน</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

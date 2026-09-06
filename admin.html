@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายการคำสั่งซื้อ — Lungจั้มมั้ม (Admin)</title>
+  <meta name="description" content="หน้าแอดมินสำหรับดูรายการคำสั่งซื้อทั้งหมดของ Lungจั้มมั้ม">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== Navbar ========== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">Lungจั้มมั้ม</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="product.html">สินค้าทั้งหมด</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== Page Heading ========== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>รายการคำสั่งซื้อ</h1>
+      <p>ข้อมูลคำสั่งซื้อทั้งหมดที่ลูกค้าส่งเข้ามา ดึงตรงจาก Google Sheet</p>
+    </div>
+  </section>
+
+  <!-- ========== Orders Table Section ========== -->
+  <section class="admin-section">
+    <div class="container">
+      <div class="table-wrapper">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>วันที่/เวลา</th>
+              <th>ชื่อลูกค้า</th>
+              <th>เบอร์โทร / Line</th>
+              <th>รายการสินค้า</th>
+              <th>ยอดรวม (บาท)</th>
+              <th>หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- script.js จะเติมแถวข้อมูลตรงนี้ -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <p>&copy; 2026 Lungจั้มมั้ม — ตุ๊กตามังกรขนฟูที่พร้อมกอดคุณทุกวัน</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
